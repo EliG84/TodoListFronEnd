@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from 'react-router-dom';
+import HeaderMain from './Components/Header/HeaderMain';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const App = (props) => {
+  let [user, setUser] = useState({});
+  let [logged, setLogged] = useState(true);
 
-  render() {
-    return <React.Fragment></React.Fragment>;
-  }
-}
+  useEffect(() => {}, []);
+
+  return (
+    <Router>
+      <div className='container'>
+        <HeaderMain logged={logged} />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
