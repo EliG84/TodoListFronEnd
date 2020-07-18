@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const MainTodos = (props) => {
-  let [todos, setTodos] = useState([]);
-
-  useEffect(() => {}, []);
-
-  return <div className='container'></div>;
+  return <div className='container'>{props.todos.length}</div>;
 };
 
 export default MainTodos;
