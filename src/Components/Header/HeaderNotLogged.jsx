@@ -1,9 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const NotLogged = (props) => {
-  let login = useRef(null);
-  let signup = useRef(null);
   let history = useHistory();
 
   const loginButton = () => {

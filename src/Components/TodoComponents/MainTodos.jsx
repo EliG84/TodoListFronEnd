@@ -8,10 +8,9 @@ const MainTodos = (props) => {
 
   useEffect(() => {
     setTodos(props.user.todos);
-  });
+  }, [props.user.todos]);
 
   const addTodo = async (todo) => {
-    console.log(todo.name);
     if (
       todos.filter((t) => t.name.toLowerCase() === todo.name.toLowerCase())
         .length

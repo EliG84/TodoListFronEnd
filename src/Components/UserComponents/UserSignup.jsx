@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { singup } from '../../Services/todoService';
 
@@ -10,6 +10,10 @@ const UserSignup = (props) => {
   let answer = useRef(null);
 
   let history = useHistory();
+
+  useEffect(() => {
+    if (props.user) history.push('/');
+  });
 
   const formSubmit = async (e) => {
     e.preventDefault();
