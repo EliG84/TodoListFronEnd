@@ -24,7 +24,7 @@ const App = (props) => {
       return;
     } else if (localStorage['token']) {
       async function fetchData() {
-        let data = await Api.getTodos(localStorage.getItem('token'));
+        let data = await Api.getTodos();
         if (data.logged) {
           setUser(data.body);
         }
@@ -43,7 +43,7 @@ const App = (props) => {
         {loading ? (
           'Loading....'
         ) : logged ? (
-          <MainTodos todos={user.todos} />
+          <MainTodos user={user} setUser={setUser} />
         ) : (
           <Redirect to='/login' />
         )}

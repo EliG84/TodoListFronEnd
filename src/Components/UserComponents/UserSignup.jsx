@@ -24,6 +24,8 @@ const UserSignup = (props) => {
       props.setUser(data.body);
       localStorage.setItem('token', data.token);
       history.push('/');
+    } else {
+      alert(data.body);
     }
   };
 
