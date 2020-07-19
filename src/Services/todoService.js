@@ -1,5 +1,5 @@
 export const getTodos = async () => {
-  const url = 'http://localhost:3001/authUser/getTodos';
+  const url = 'https://enigmatic-sands-86682.herokuapp.com/authUser/getTodos';
   let resp = await fetch(url, {
     headers: { 'x-auth-token': localStorage.getItem('token') },
   });
@@ -8,7 +8,7 @@ export const getTodos = async () => {
 };
 
 export const signin = async (user) => {
-  const url = 'http://localhost:3001/authUser/signin';
+  const url = 'https://enigmatic-sands-86682.herokuapp.com/authUser/signin';
   let resp = await fetch(url, {
     method: 'Post',
     headers: { 'content-type': 'application/json' },
@@ -19,7 +19,7 @@ export const signin = async (user) => {
 };
 
 export const singup = async (user) => {
-  const url = 'http://localhost:3001/authUser/signup';
+  const url = 'https://enigmatic-sands-86682.herokuapp.com/authUser/signup';
   let resp = await fetch(url, {
     method: 'Post',
     headers: { 'content-type': 'application/json' },
@@ -30,7 +30,7 @@ export const singup = async (user) => {
 };
 
 export const addTodo = async (todos) => {
-  let url = 'http://localhost:3001/authUser/addTodo';
+  let url = 'https://enigmatic-sands-86682.herokuapp.com/authUser/addTodo';
   let resp = await fetch(url, {
     method: 'Post',
     headers: {
@@ -44,7 +44,7 @@ export const addTodo = async (todos) => {
 };
 
 export const delTodo = async (id) => {
-  const url = `http://localhost:3001/authUser/delTodo/${id}`;
+  const url = `https://enigmatic-sands-86682.herokuapp.com/authUser/delTodo/${id}`;
   let resp = await fetch(url, {
     headers: { 'x-auth-token': localStorage.getItem('token') },
   });
